@@ -20,6 +20,6 @@ var disqus_shortname = 'seanchoe'; // required: replace example with your forum 
 }());
 </script>
 <!-- end DISQUS -->
-   
+<?php wp_footer();?>
 </body>
 </html>

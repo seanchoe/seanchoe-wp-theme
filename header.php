@@ -46,7 +46,6 @@ else {
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
 
 	?></title>
-<meta name="description" content="See Sean Choe's comic, blog and works">
 
 <script type="text/javascript">
 	var ua = navigator.userAgent;
@@ -108,6 +107,8 @@ else {
 		}
 	}
 </script>
+
+<?php wp_head(); ?>
 
 <!-- Google Analytics -->
 <script type="text/javascript">
