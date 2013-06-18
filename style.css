@@ -191,7 +191,8 @@ img#logo {
 }
 
 p#brief_profile {
-	
+	font-size: 16px;
+	line-height: 1.4em;
 }
 
 div.social_buttons {

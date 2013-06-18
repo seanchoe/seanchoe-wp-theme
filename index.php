@@ -24,19 +24,21 @@ else {
 
 ?>
 <div id="content" class="front">
-<h2>Sean's Visual Journal</h2>
 <p id="brief_profile">
 <?php 
 $category_id;
 if ($seanchoe_language == "kr") :
 $category_id = 6;
 ?>
-제 이름은 Sean Choe, 한국 이름은 최우형 입니다. UX/그래픽 디자이너이자 프론트앤드/웹 개발자 입니다. 테크놀로지와 음악, 영화 및 예술에 관심이 많습니다. 현재 미국 Bay Area에 거주 중입니다.<br/>
+<h3>최우형의 웹사이트입니다.</h3>
+저는 UX/그래픽 디자이너이자 프론트앤드/웹 개발자 입니다. 테크놀로지와 영화, 음악 및 예술에 관심이 많습니다.<br/>
 저에 대해서는 <a href="/about-kr">여기</a>에서 더 자세히 알 수 있습니다.</p>
 <?php else :
 $category_id = 5;
 ?>
-My name is Sean Choe. I'm a UX/graphic designer and iOS/web developer. I love technology, music, movies and arts. Currently staying in Bay Area.<br/>
+<h3>Welcome to Sean Choe's website.</h3>
+I'm a UX/graphic designer and iOS/web developer.<br/>
+I love technology, movies, music and arts.<br/>
 Learn more about me <a href="/about">here</a>.</p>
 <?php endif; ?>
 
