@@ -1,3 +1,5 @@
+<?php get_sidebar(); ?>
+
 <div id="footer">
 <?php echo $current_page;?>
 © 2012 Sean Choe. All Rights Reserved

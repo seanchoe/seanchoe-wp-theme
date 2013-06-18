@@ -24,6 +24,11 @@ else {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<?php
+if (isMobile()) {
+	echo '<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />';
+}
+?>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <title><?php
 	/*
@@ -48,12 +53,14 @@ else {
 	?></title>
 
 <script type="text/javascript">
-	var ua = navigator.userAgent;
-	
-	//For iPhone, change meta
-	if (ua.match(/iPhone/i) !== null) {
-		document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />');
-	}		
+<?php
+if (isMobile()) {
+	echo "var isMobile = true;";
+}
+else {
+	echo "var isMobile = false;";
+}
+?>	
 </script>
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -77,15 +84,20 @@ else {
 		// iPhone image size
 		if (ua.match(/iPhone/i) !== null) {
 			$(document).find('img').each(function() {
-				//$(this).hide();
-				//var currentWidth = $(this).width();
 				if ($(this).width() > 300) {
 					$(this).css({
 						'max-width': 300,
 						'max-height': $(this).height() * (300 / $(this).width())
 					});
 				}
-				//$(this).maxHeight($(this).height * ($(this).width() / currentWidth));
+			});
+			
+			$(document).find('.wp-caption').each(function() {
+				if ($(this).width() > 300) {
+					$(this).css({
+						'max-width': 300
+					});
+				}
 			});
 		}
 		
@@ -136,6 +148,6 @@ else {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <!-- Facebook SDK Ends -->
-<?php get_sidebar(); ?>
+
 <div id="wrapper">
 	<div id="main">

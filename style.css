@@ -349,6 +349,14 @@ div#disqus_thread {
 	width: 100%;
 }
 
+/* WordPress */
+
+.wp-caption-text {
+	font-size: 13px;
+	text-align: center;
+	margin-top: 0px;
+}
+
 /* Retina */
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
 	div#sidebar {
@@ -404,6 +412,8 @@ div#disqus_thread {
 		min-width: 320px;
 		height: auto;
 		text-align: center;
+		background-image: none;
+		padding-top: 20px;
 	}
 	
 	img#logo {
@@ -461,6 +471,8 @@ div#disqus_thread {
 		margin: 0;
 		padding: 20px 0;
 		text-align: center;
+		background-color: black;
+		color: #777;
 	}
 	
 	h2 {
