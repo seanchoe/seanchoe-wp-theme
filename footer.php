@@ -1,10 +1,12 @@
-<?php get_sidebar(); ?>
+</div><!-- #main ends -->
+
+<?php wp_footer();?>
 
 <div id="footer">
 <?php echo $current_page;?>
-© 2012 Sean Choe. All Rights Reserved
+© 2012-2013 Sean Choe. All Rights Reserved
 </div>
-</div><!-- #main ends -->
+
 </div><!-- #wrapper ends -->
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/scripts/retina.js"></script>
 
@@ -22,6 +24,5 @@ var disqus_shortname = 'seanchoe'; // required: replace example with your forum 
 }());
 </script>
 <!-- end DISQUS -->
-<?php wp_footer();?>
 </body>
 </html>

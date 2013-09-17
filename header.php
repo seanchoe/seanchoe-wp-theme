@@ -1,29 +1,12 @@
-<?php
-// Cookie
-if (isset($_GET["ln"])) {
-	if ($_GET["ln"] != $_COOKIE["language"]) {
-		setcookie("language", $_GET["ln"], time() + (20 * 365 * 24 * 60 * 60));
-	}
-}
-
-// Language
-$seanchoe_language;
-if (isset($_GET["ln"])) {
-	$seanchoe_language = $_GET["ln"];
-}
-else {
-	if (isset($_COOKIE["language"])) {
-		$seanchoe_language = $_COOKIE["language"];
-	}
-	else {
-		$seanchoe_language = "en";
-	}
-}
-?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
+<!-- JQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<?php wp_head(); ?>
+
 <?php
 if (isMobile()) {
 	echo '<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />';
@@ -67,15 +50,7 @@ else {
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
 <link rel="icon" type="image/png" href="/images/favicon.png" />
 <link rel="icon" type="image/gif" href="/images/favicon.gif" />
-
-<!-- JQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-
-<?php if ($seanchoe_language == "kr") : ?>
-<link rel="alternate" type="application/rss+xml" title="Sean's Visual Journal" href="http://seanchoe.com/?feed=rss2&cat=6,8" />
-<?php else : ?>
-<link rel="alternate" type="application/rss+xml" title="Sean's Visual Journal" href="http://seanchoe.com/?feed=rss2&cat=5,7" />
-<?php endif; ?>
+<link rel="alternate" type="application/rss+xml" title="Sean's Visual Journal" href="http://seanchoe.com/?feed=rss2" />
 
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -100,24 +75,7 @@ else {
 				}
 			});
 		}
-		
-		fitSidebarHeight();
 	});
-	
-	$(window).load(function() {
-		fitSidebarHeight();
-	});
-	
-	// iPad sidebar height
-	function fitSidebarHeight() {
-		var ua = navigator.userAgent;
-	
-		if (ua.match(/iPad/i) !== null) {
-			$('#sidebar_wrapper').css({
-				'min-height': $('#main').height() + 40
-			});
-		}
-	}
 </script>
 
 <!-- Add fancyBox -->
@@ -128,8 +86,6 @@ else {
 		$('.fancybox').fancybox();
 	});
 </script>
-
-<?php wp_head(); ?>
 
 <!-- Google Analytics -->
 <script type="text/javascript">
@@ -148,16 +104,28 @@ else {
 
 </head>
 <body>
-<!-- Facebook SDK Starts -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=267982233303113";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<!-- Facebook SDK Ends -->
 
 <div id="wrapper">
+
+	<div id="topbar">
+		<div id="topbar_in">
+			<div id="logo">
+				<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Sean Choe Logo" /></a>
+			</div>
+			<div class="nav-menu">
+				<ul>
+					<li><a href="<?php echo home_url(); ?>">Comic</a></li>
+					<li><a href="<?php echo home_url(); ?>/works">Works</a></li>
+					<li><a href="<?php echo home_url(); ?>/about">About</a></li>
+				</ul>
+			</div>
+			<div id="nav_sub_menu">
+				<span><a href="<?php echo get_bloginfo('atom_url'); ?>">RSS</a></span>/
+				<span><a href="">Email</a></span>/
+				<span><a href="http://twitter.com/seanchoe" target="_blank">Twitter</a></span>
+			</div>
+			<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+		</div>
+	</div>
+					
 	<div id="main">

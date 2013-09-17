@@ -8,16 +8,6 @@
 			<?php endif; ?>
 			<div class="post_body"><?php the_content(); ?></div>
 			
-			<div class="social_buttons page">
-				<div class="social_button_each">
-					<div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
-				</div>
-				<div class="social_button_each">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-via="seanchoe" data-related="seanchoe">Tweet</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</div>
-			</div>
-			
 			<div class="page_navigation single">
 				<div class="previous">
 					<?php $next_post = get_next_post(true);
@@ -36,6 +26,7 @@
 			<!-- Comments start -->
 			
 			<!-- Disqus -->
+			<!--
 			<div id="disqus_thread"></div>
 			<script type="text/javascript">
 	            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -51,6 +42,7 @@
 	        </script>
 	        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 	        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	        -->
 	
 			<!-- Comments end -->
 	<?php endwhile; ?>
