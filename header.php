@@ -120,6 +120,15 @@ else {
 	}
 </script>
 
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.fancybox').fancybox();
+	});
+</script>
+
 <?php wp_head(); ?>
 
 <!-- Google Analytics -->
@@ -136,6 +145,7 @@ else {
   })();
 
 </script>
+
 </head>
 <body>
 <!-- Facebook SDK Starts -->
