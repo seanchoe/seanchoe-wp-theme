@@ -19,10 +19,10 @@ var disqus_shortname = 'seanchoe'; // required: replace example with your forum 
 (function () {
     var s = document.createElement('script'); s.async = true;
     s.type = 'text/javascript';
-    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 }());
-</script>
+</script>    
 <!-- end DISQUS -->
 </body>
 </html>

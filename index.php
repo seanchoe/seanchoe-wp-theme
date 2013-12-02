@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<div id="main_in">
-	<div id="content">
+<div id="content">
+	<div id="content_in">
 	<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 				<div class="post_wrapper">
@@ -11,7 +11,7 @@
 					</div>
 					<div class="post_body"><?php the_content('Read more >'); ?></div>
 					<!-- Comment counts -->
-					<!--<div class="comments_count"><a href="<?php the_permalink(); ?>#disqus_thread" data-disqus-identifier="article-<?php echo the_ID();?>-identifier">Loading comment count...</a></div>-->
+					<div class="comments_count"><a href="<?php the_permalink(); ?>#disqus_thread">Comments</a></div>
 				</div>
 				<?php endwhile; ?>
 				<div class="page_navigation">
@@ -21,8 +21,8 @@
 	<?php else :
 	include('http://seanchoe.com/wordpress/wp-content/themes/seanchoe/empty.php');
 	endif; ?>
-	</div><!-- #content ends -->
-	<?php get_sidebar(); ?>
-</div><!-- #main_in ends -->
+	</div><!-- #content_in ends -->
+</div><!-- #content ends -->
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

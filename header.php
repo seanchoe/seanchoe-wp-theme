@@ -7,11 +7,6 @@
 
 <?php wp_head(); ?>
 
-<?php
-if (isMobile()) {
-	echo '<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />';
-}
-?>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <title><?php
 	/*
@@ -35,48 +30,11 @@ if (isMobile()) {
 
 	?></title>
 
-<script type="text/javascript">
-<?php
-if (isMobile()) {
-	echo "var isMobile = true;";
-}
-else {
-	echo "var isMobile = false;";
-}
-?>	
-</script>
-
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-<link rel="icon" type="image/png" href="/images/favicon.png" />
-<link rel="icon" type="image/gif" href="/images/favicon.gif" />
-<link rel="alternate" type="application/rss+xml" title="Sean's Visual Journal" href="http://seanchoe.com/?feed=rss2" />
-
-<script type="text/javascript">
-	$(document).ready(function() {
-		var ua = navigator.userAgent;
-	
-		// iPhone image size
-		if (ua.match(/iPhone/i) !== null) {
-			$(document).find('img').each(function() {
-				if ($(this).width() > 300) {
-					$(this).css({
-						'max-width': 300,
-						'max-height': $(this).height() * (300 / $(this).width())
-					});
-				}
-			});
-			
-			$(document).find('.wp-caption').each(function() {
-				if ($(this).width() > 300) {
-					$(this).css({
-						'max-width': 300
-					});
-				}
-			});
-		}
-	});
-</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="icon" type="image/gif" href="/favicon.gif" />
+<link rel="alternate" type="application/rss+xml" title="Sean's Visual Journal" href="<?php bloginfo('rss2_url'); ?>" />
 
 <!-- Add fancyBox -->
 <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
@@ -105,27 +63,5 @@ else {
 </head>
 <body>
 
-<div id="wrapper">
-
-	<div id="topbar">
-		<div id="topbar_in">
-			<div id="logo">
-				<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Sean Choe Logo" /></a>
-			</div>
-			<div class="nav-menu">
-				<ul>
-					<li><a href="<?php echo home_url(); ?>">Comic</a></li>
-					<li><a href="<?php echo home_url(); ?>/works">Works</a></li>
-					<li><a href="<?php echo home_url(); ?>/about">About</a></li>
-				</ul>
-			</div>
-			<div id="nav_sub_menu">
-				<span><a href="<?php echo get_bloginfo('atom_url'); ?>">RSS</a></span>/
-				<span><a href="">Email</a></span>/
-				<span><a href="http://twitter.com/seanchoe" target="_blank">Twitter</a></span>
-			</div>
-			<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-		</div>
-	</div>
-					
+<div id="wrapper">					
 	<div id="main">
