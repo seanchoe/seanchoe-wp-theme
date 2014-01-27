@@ -15,7 +15,7 @@ $cat_slug = $category[0]->slug;
 
 <div class="sidebar-container">
 	<div class="sidebar-inner">
-		<div class="search"><?php get_search_form(); ?></div>
+		<!--<div class="search"><?php get_search_form(); ?></div>-->
 <?php if ( is_active_sidebar( 'main_sidebar' ) ) : ?>
 		<div class="widget-area">
 			<?php dynamic_sidebar( 'main_sidebar' ); ?>

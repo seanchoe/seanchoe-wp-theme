@@ -72,7 +72,7 @@ ul, ol {
 
 /* Sidebar */
 
-.search input[type="text"] {
+#searchform input[type="text"] {
 	border-radius: 12px;
 	border: 1px solid #bbb;
 	max-width: 130px;
@@ -94,6 +94,13 @@ ul, ol {
 	float: right;
 	max-width: 50%;
 	text-align: right;
+}
+
+/* Search */
+.search_title {
+	padding: 20px 0;
+	font-size: 22px;
+	color: #888;
 }
 
 /* Desktop Size screens */
@@ -189,6 +196,7 @@ ul, ol {
 	
 	.content {
 		width: 650px;
+		min-height: 500px;
 		line-height: 1.4em;
 		float: right;
 	}
@@ -245,15 +253,6 @@ ul, ol {
 		font-size: 13px;
 		color: #888;
 		padding: 20px 0px;
-	}
-	
-	/* Search */
-	
-	.search_title {
-		font-size: 1.4em;
-		color: #888;
-		font-weight: bold;
-		padding: 10px 0 30px 0;
 	}
 }
 
@@ -384,11 +383,6 @@ ul, ol {
 	
 	/* Sidebar */
 	
-	.search {
-		text-align: center;
-		padding: 10px 0;
-	}
-	
 	/* Footer */
 	
 	.footer {
@@ -413,11 +407,6 @@ ul, ol {
 	.sidebar {
 		background-image: url('./images/sidebar_background@2x.png');
 		background-size: 250px 50px;
-	}
-	
-	.search .search_float {
-		background-image: url('./images/search_background@2x.png');
-		background-size: 173px 31px;
 	}
 	
 	.hamburger {
