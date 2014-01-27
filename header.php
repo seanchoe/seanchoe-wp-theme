@@ -4,7 +4,7 @@
 <head>
 
 <!-- JQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 <?php wp_head(); ?>
 
@@ -43,7 +43,7 @@
 <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 <script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 <script type="text/javascript">
-	$(document).ready(function() {
+	jQuery(document).ready(function($) {
 		$('.fancybox').fancybox();
 	});
 </script>
