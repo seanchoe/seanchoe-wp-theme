@@ -374,7 +374,7 @@ ul, ol {
 	
 	.post_body {
 		padding: 10px 0;
-		font-size: 14px;
+		font-size: 16px;
 	}
 	
 	.comments_count {
@@ -403,6 +403,7 @@ ul, ol {
 	
 	.page_navigation.single {
 		height: 30px;
+		padding-bottom: 20px;
 	}
 }
 
@@ -416,5 +417,10 @@ ul, ol {
 	.search .search_float {
 		background-image: url('./images/search_background@2x.png');
 		background-size: 173px 31px;
+	}
+	
+	.hamburger {
+		background-image: url('./images/icon_hamburger@2x.png');
+		background-size: 30px 24px;
 	}
 }
