@@ -1,7 +1,3 @@
-h2 {
-	margin: 0;
-}
-
 /* WordPress */
 .alignleft {
 	display: inline;
@@ -28,6 +24,7 @@ h2 {
 
 /* Common */
 body {
+	-webkit-text-size-adjust: none;
 	margin: 0px;
 	padding: 0px;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -35,8 +32,12 @@ body {
 
 img {
 	border: none;
-	max-width: 100%;
-	height: auto;
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+h2 {
+	margin: 0;
 }
 
 a, a:visited {
