@@ -2,13 +2,14 @@
 
 <?php wp_footer();?>
 
-<div id="footer">
+<div class="footer">
 <?php echo $current_page;?>
 © 2012-2013 Sean Choe. All Rights Reserved
 </div>
 
 </div><!-- #wrapper ends -->
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/scripts/retina.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/scripts/common.js"></script>
 
 <!-- start DISQUS -->
 <script type="text/javascript">

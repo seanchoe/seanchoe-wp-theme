@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<div id="content">
-	<div id="content_in">
+<div class="content">
+	<div class="content_in">
 	<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 				<div class="post_wrapper">

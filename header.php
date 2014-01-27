@@ -1,3 +1,4 @@
+<?php $session_number = 0; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -63,5 +64,30 @@
 </head>
 <body>
 
-<div id="wrapper">					
-	<div id="main">
+<div class="wrapper">					
+	<div class="main">
+	<div class="nav_wrapper">
+		<div class="nav_mobile">
+			<a href="javascript:void(0)" class="hamburger" id="mobile_menu_button"></a>
+			<div class="logo_link_mobile"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Sean Choe Logo" /></a></div>
+			<div class="nav_right_shoulder"></div>
+		</div>
+		<div class="logo desktop">
+			<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Sean Choe Logo" /></a>
+		</div>
+		
+		<div class="nav_hide">
+			<div class="nav_menu">
+				<ul>
+					<li><a href="<?php echo home_url(); ?>"<?php if (is_home()) echo " class='active'"?>>Comic</a></li>
+					<li><a href="<?php echo home_url(); ?>/works"<?php if (is_page('works')) echo " class='active'"?>>Works</a></li>
+					<li><a href="<?php echo home_url(); ?>/about"<?php if (is_page('about')) echo " class='active'"?>>About</a></li>
+				</ul>
+			</div>
+			<div class="nav_sub_menu">
+				<span><a href="<?php echo get_bloginfo('rss2_url'); ?>">RSS</a></span><span class="divider">/</span>
+				<span><a href="http://eepurl.com/JTvA5">Email Updates</a></span><span class="divider">/</span>
+				<span><a href="http://twitter.com/seanchoe">Twitter</a></span>
+			</div>
+		</div>
+	</div>
