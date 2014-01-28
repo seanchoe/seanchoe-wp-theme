@@ -84,13 +84,13 @@ ul, ol {
 	background-position: 7px 4px;
 }
 
-/* Single */
-.page_navigation.single .previous {
+/* Single, Home */
+.previous {
 	float: left;
 	max-width: 50%;
 }
 
-.page_navigation.single .next {
+.next {
 	float: right;
 	max-width: 50%;
 	text-align: right;
