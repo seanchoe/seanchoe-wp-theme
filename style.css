@@ -383,6 +383,10 @@ ul, ol {
 	
 	/* Sidebar */
 	
+	.sidebar-container {
+		padding: 10px 5px;
+	}
+	
 	/* Footer */
 	
 	.footer {
@@ -412,5 +416,10 @@ ul, ol {
 	.hamburger {
 		background-image: url('./images/icon_hamburger@2x.png');
 		background-size: 30px 24px;
+	}
+	
+	#searchform input[type="text"] {
+		background-image: url('./images/icon_search@2x.png');
+		background-size: 16px 16px;
 	}
 }
