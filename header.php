@@ -71,7 +71,7 @@
 	<div class="nav_wrapper">
 		<div class="nav_mobile">
 			<a href="javascript:void(0)" class="hamburger" id="mobile_menu_button"></a>
-			<div class="logo_link_mobile"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Sean Choe Logo" /></a></div>
+			<div class="logo_link_mobile"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Sean Choe Logo" class="retina" /></a></div>
 			<div class="nav_right_shoulder"></div>
 		</div>
 		<div class="logo desktop">

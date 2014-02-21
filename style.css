@@ -407,12 +407,7 @@ ul, ol {
 }
 
 /* Retina */
-@media all and (-webkit-min-device-pixel-ratio: 1.5) {
-	.sidebar {
-		background-image: url('./images/sidebar_background@2x.png');
-		background-size: 250px 50px;
-	}
-	
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {	
 	.hamburger {
 		background-image: url('./images/icon_hamburger@2x.png');
 		background-size: 30px 24px;
