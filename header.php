@@ -81,7 +81,7 @@
 		<div class="nav_hide">
 			<div class="nav_menu">
 				<ul>
-					<li><a href="<?php echo home_url(); ?>"<?php if (is_home() || is_single()) echo " class='active'"?>>Blog</a></li>
+					<li><a href="<?php echo home_url(); ?>"<?php if (is_home() || is_single()) echo " class='active'"?>>Home</a></li>
 					<li><a href="<?php echo home_url(); ?>/works"<?php if (is_page('works')) echo " class='active'"?>>Works</a></li>
 					<li><a href="<?php echo home_url(); ?>/about"<?php if (is_page('about')) echo " class='active'"?>>About</a></li>
 				</ul>
